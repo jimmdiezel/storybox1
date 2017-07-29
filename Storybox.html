@@ -1,0 +1,725 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<head>
+
+<title> Storybox </title>
+
+<link rel="stylesheet" type="text/css" href="basiclayout1.css" />
+<script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+
+</head>
+
+<body>
+
+<div id="space1">
+
+<ul id="index">
+
+<li><a>CHICKENNCHIPS</a></li>
+<li><a>ALDO</a></li>
+<li><a>FRANKWRIGHT</a></li>
+<li><a>TEDTHEMOVIE</a></li>
+
+</ul>
+
+</div>
+
+<div id="space2">
+
+<div id="system">
+
+<div id="sun">
+
+<div class="tab">
+</div>
+
+<div id="loginbox">
+</div>
+
+<div id="logo">
+</div>
+
+<div id="version">
+</div>
+
+</div> <!-- sun close -->
+
+<div id="system2">
+
+<div id="moon">
+
+
+<div class="slate1" id="navSlate">
+
+<div id="navbar">
+
+<div id="navbar2">
+
+<ul class="navbar" id="navSlate1">
+
+<li id="update"><a>UPDATE</a></li>
+<li id="proxy"><a>PROXY</a></li>
+<li id="tracker"><a>TRACKER</a></li>
+<li id="records"><a>RECORDS</a></li>
+<li id="broadcast"><a>BROADCAST</a></li>
+<li id="locater"><a>LOCATER</a></li>
+<li id="admin"><a>ADMIN</a></li>
+
+</ul>
+
+<ul class="navbar" id="navSlate2">
+
+</ul>
+
+
+</div> <!-- navbar2 close -->
+
+</div> <!-- navbar close -->
+
+</div> <!-- slate1 close -->
+
+
+<div class="rowTypeA" id="row1">
+
+<div class="tabRight">
+</div>
+
+</div> <!-- rowTypeA close -->
+
+
+
+<div class="slate1" id="panSlate">
+
+<div class="panel1" id="pan1">
+
+<div class="panel2">
+
+
+<ul class="navbar" id="panSlate1">
+
+<li><a>TOUCHSCREEN</a></li>
+<li><a>TELEVISION</a></li>
+<li><a>TELEPORT</a></li>
+
+</ul>
+
+
+</div>
+
+</div> <!-- panel1 close -->
+
+<div class="window" id="win1">
+
+<div class="tab">
+</div>
+
+</div> <!-- window close -->
+
+<div class="underline1" id="underL1">
+
+<div class="underline2">
+</div>
+
+</div> <!-- underline1 close -->
+
+</div> <!-- slate1 close -->
+
+
+
+</div> <!-- moon close -->
+
+<div id="earth">
+
+<div class="rowTypeA" id="row2">
+
+<div class="tabRight">
+</div>
+
+</div> <!-- rowTypeA close -->
+
+
+
+<div class="slate1" id="earSlate">
+
+<div class="panel1" id="pan2">
+
+<div class="panel2">
+
+
+<ul class="navbar" id="panSlate2">
+
+<li><a>EARTH</a></li>
+<li><a>EDIT</a></li>
+<li><a>SETTINGS</a></li>
+<li><a>VARIABLES</a></li>
+
+</ul>
+
+
+</div>
+
+</div> <!-- panel1 close -->
+
+<div class="window" id="win2">
+
+<div class="tab">
+</div>
+
+</div> <!-- window close -->
+
+<div class="underline1" id="underL2">
+
+<div class="underline2">
+</div>
+
+</div> <!-- underline1 close -->
+
+</div> <!-- slate1 close -->
+
+</div> <!-- earth close -->
+
+<div id="ozone">
+
+<div class="rowTypeA" id="endRow">
+
+<div class="tabRight">
+</div>
+
+</div> <!-- rowTypeA close -->
+
+
+
+<div class="slate1" id="endSlate">
+</div>
+
+<div id="endLeft">
+</div>
+
+<div id="endCanvas">
+</div>
+
+</div> <!-- ozone close -->
+
+</div> <!-- system2 close -->
+
+<div id="stars">
+
+<div class="canvas">
+
+<div id="starBar">
+</div>
+
+</div>
+
+</div> <!-- stars close -->
+
+</div> <!-- system close -->
+
+</div> <!-- space2 close -->
+
+<div id="space3">
+
+<div class="canvas" id="sp3Canvas">
+
+<div id="sp3Bar">
+
+<div id ="button1">
+</div>
+
+<div id="button2">
+</div>
+
+</div>
+
+</div>
+
+</div> <!-- space3 close -->
+
+<script language="Javascript">
+
+YUI().use('node', 'event', function (gui) {
+
+var spa1  = gui.one('#space1');
+var spa2  = gui.one('#space2');
+var spa3  = gui.one('#space3');
+var abyss1 = gui.one('#abyss1');
+
+var sp3Canvas = gui.one('#sp3Canvas');
+
+
+var bodProp = gui.one('body');
+var bodProp1 = bodProp.getStyle('width');
+var bodProp2 = parseInt(bodProp1);
+
+var window = gui.one('body').get('winWidth');
+// var winWidth = window;
+
+var winHeight = gui.one('body').get('winHeight');
+winHeight = parseInt(winHeight);
+
+
+
+span = [5, 22, 8];
+
+function getWidth(target){
+
+targetGeom = target.getStyle('width');
+targetGeomm = parseInt(targetGeom);
+
+return targetGeomm;
+
+} //getWidth end
+
+function getHeight(target){
+
+targetGeom = target.getStyle('height');
+targetGeomm = parseInt(targetGeom);
+
+return targetGeomm;
+
+} //getHeight end
+
+function divider(widTotal, widCalc, widSelect){
+
+var j = widCalc.length;
+var k = 0;
+
+
+
+for (l = 0; l < j; l++){
+ 
+k += widCalc[l];
+
+}
+
+
+modulo = widTotal % k;
+subTotal = widTotal - modulo;
+factor = subTotal / k;
+
+widFig = [];
+
+for (m=0; m < j; m++){
+
+widFig[m] = widCalc[m] * factor;
+
+}
+
+// spa3.setHTML(modulo + '.' + factor + '.' + subTotal);
+
+widFig[widSelect] = widFig[widSelect] + modulo;
+
+return widFig;
+
+} //divider end
+
+var navSlate2 = gui.one('#navSlate2');
+var navSlate1 = gui.one('#navSlate1');
+var navSlate = gui.one('#navSlate');
+
+var update = gui.one('#update');
+var proxy = gui.one('#proxy');
+var tracker = gui.one('#tracker');
+var records = gui.one('#records');
+var broadcast = gui.one('#broadcast');
+var locater = gui.one('#locater');
+var admin = gui.one('#admin');
+
+var navSlateObj = [update, proxy, tracker, records, broadcast, locater, admin];
+
+
+
+function setup (set){
+
+var setFig = [];
+j = 0;
+
+setNext = set.one('li');
+
+while (setNext != undefined){
+
+setFig[j] = setNext;
+setNext = setFig[j].next();
+j++
+
+}
+
+return setFig;
+
+}
+
+function extender (set, widTotal){
+
+var setFig = [];
+
+setLast = set.all('li').slice(-1).item(0);
+
+setOne = set.one('li');
+
+if (j > 0) {
+
+setOnee = setOne.getStyle('width');
+setFig[0] = setOne;
+setNext = setOne.next();
+
+l=1;
+
+while (setNext != undefined){
+
+setFig[l] = setNext;
+setNext = setFig[l].next();
+l++;
+
+}
+
+var setNum = setFig.length;
+
+setTotal = 0;
+
+for (j=0; j < setNum; j++){
+
+var setAdd = setFig[j].getStyle('width');
+var setAdd2 = parseInt(setAdd);
+setTotal += setAdd2;
+
+}
+
+k = j + 1;
+
+var widRem = widTotal - setTotal;
+
+
+modulo = widRem % j;
+subTotal = widRem - modulo;
+factor = subTotal / j;
+
+for (j=0; j < setNum; j++){
+
+var setAdd = setFig[j].getStyle('width');
+var setAdd2 = parseInt(setAdd);
+var setAdd3 = setAdd2 + factor;
+
+if (j < modulo){
+
+setAdd3 += 1;
+
+}
+
+setFig[j].setStyle('width', setAdd3 +'px');
+
+}
+
+
+}
+
+} // extender end
+
+function extension (set, space, pad){
+
+setFig = setup(set);
+setNum = setFig.length;
+
+widTotal = space.getStyle('width');
+widTotall = parseInt (widTotal);
+
+factorA = pad + 1;
+factorB = factorA * setNum;
+factorC = factorB + 6;
+
+widTotall -= factorC;
+
+return widTotall;
+
+
+} // extension end
+
+
+
+widProp = [];
+widProp = divider(bodProp2, span, 1);
+widProp[3] = widProp[1] - 1;
+
+if (widProp[0] > 100){
+
+spa1.setStyle('width', widProp[0] + 'px');
+spa2.setStyle('width', widProp[3] + 'px');
+spa2.setStyle('right', widProp[2] + 'px');
+spa3.setStyle('width', widProp[2] + 'px');
+
+}
+
+else {
+
+bodProp2 -= 25;
+span2 = [22, 8];
+widProp2 = divider(bodProp2, span2, 0);
+
+
+spa1.setStyle('width', '25px');
+spa2.setStyle('width', widProp2[0] + 'px');
+spa2.setStyle('right', widProp2[1] + 'px'); // change from 'widProp[2]'
+spa3.setStyle('width', widProp2[1] + 'px');
+
+}
+
+var loginbox = gui.one('#loginbox');
+var logo = gui.one('#logo');
+var version = gui.one('#version');
+var sun = gui.one('#sun');
+var system2 = gui.one('#system2');
+var row1 = gui.one('#row1');
+var underL1 = gui.one('#underL1');
+var pan1 = gui.one('#pan1');
+var win1 = gui.one('#win1');
+var sp3Bar = gui.one('#sp3Bar');
+var stars = gui.one('#stars');
+var starBar = gui.one('#starBar');
+
+stars.setStyle('height', winHeight + 'px');
+
+function setTop (set, target, extra){
+
+height = 0;
+setAdd = 0;
+
+for (j = 0; j < set.length; j++){
+
+add = getHeight(set[j]);
+setAdd += add;
+
+
+}
+
+setAdd += extra;
+
+target.setStyle('top', setAdd + 'px');
+
+}
+
+function setHeight (set, target, extra){
+
+height = 0;
+setAdd = 0;
+
+for (j = 0; j < set.length; j++){
+
+add = getHeight(set[j]);
+setAdd += add;
+
+}
+
+setAdd += extra;
+
+target.setStyle('height', setAdd + 'px');
+
+}
+
+function setWidth (set, target, extra){
+
+height = 0;
+setAdd = 0;
+
+for (j = 0; j < set.length; j++){
+
+add = getWidth(set[j]);
+setAdd += add;
+
+}
+
+setAdd += extra;
+
+target.setStyle('width', setAdd + 'px');
+
+}
+
+function setLeft (set, target, extra){
+
+height = 0;
+setAdd = 0;
+
+for (j = 0; j < set.length; j++){
+
+add = getWidth(set[j]);
+setAdd += add;
+
+}
+
+setAdd += extra;
+
+target.setStyle('left', setAdd + 'px');
+
+}
+
+topObj = [];
+topObj.logo = [loginbox];
+setTop(topObj.logo, logo, 1);
+
+topObj.version = [loginbox];
+setTop(topObj.version, version, 1);
+
+widObj = [];
+heiObj = [];
+heiObj.sun = [];
+heiObj.sun[0] = loginbox;
+heiObj.sun[1] = logo;
+setHeight(heiObj.sun, sun, 1);
+
+topObj.system2 = [sun];
+setTop(topObj.system2, system2, 0);
+
+var broadcast = gui.one('#broadcast');
+var locater = gui.one('#locater');
+var admin = gui.one('#admin');
+
+function twoDeck (topDeck, bottomDeck, space){
+
+sla1Width = 0;
+
+for(j=0; j < 7; j++){
+sla1Trans = getWidth(navSlateObj[j]);
+sla1Width += sla1Trans;
+}
+
+w = 'width';
+
+widBarr = getWidth(topDeck);
+widSpace = getWidth(space);
+widSpacee = widSpace - 6;
+
+setFig = setup(topDeck);
+setNum = setFig.length;
+setNumm = setNum / 2;
+
+var listTransF = function () {return topDeck.all('li').slice(-1).item(0)};
+
+if (sla1Width > widSpacee){
+
+sla2Num = 0;
+
+while (sla2Num < 3){
+sla2Trans = listTransF();
+bottomDeck.prepend(sla2Trans);
+sla2Num++;
+}
+
+nav1Heightt = getHeight(topDeck);
+nav2Heightt = getHeight(bottomDeck);
+totHeightt = nav1Heightt + nav2Heightt + 4;
+space.setStyle('height', totHeightt + 'px');
+
+}
+
+else{
+
+nav1Height = getHeight(topDeck);
+totHeightt = nav1Height + 4;
+space.setStyle('height', totHeightt + 'px');
+
+
+}
+
+
+
+} //twoDeck end
+
+twoDeck(navSlate1, navSlate2, navSlate);
+
+topObj.row1 = [];
+topObj.row1[0] = navSlate;
+setTop(topObj.row1, row1, 0);
+
+navRem = extension(navSlate1, navSlate, 2);
+
+extender(navSlate1, navRem);
+
+navRem2 = extension(navSlate2, navSlate, 2);
+
+extender(navSlate2, navRem2);
+
+panSlate = gui.one('#panSlate');
+panSlate1 = gui.one('#panSlate1');
+
+panRem = extension(panSlate1, panSlate, 2);
+extender(panSlate1, panRem);
+
+topObj.row1 = [];
+topObj.row1[0] = navSlate;
+setTop(topObj.row1, row1, 0);
+
+topObj.panSlate = [];
+topObj.panSlate[0] = navSlate;
+topObj.panSlate[1] = row1;
+setTop(topObj.panSlate, panSlate, 0);
+
+topObj.underL1 = [pan1, win1];
+setTop(topObj.underL1, underL1, 0);
+
+heiObj.panSlate2 = [pan1, win1, underL1];
+setHeight(heiObj.panSlate2, panSlate, 1);
+
+heiObj.sp3Bar = [loginbox];
+setHeight(heiObj.sp3Bar, sp3Bar, -4);
+
+topObj.stars = [sun];
+setTop(topObj.stars, stars, 0);
+
+var update = gui.one('#update');
+var moon = gui.one('#moon');
+
+lefObj = [];
+lefObj.version = [logo];
+setLeft(lefObj.version, version, 3);
+
+heiObj.moon = [navSlate, row1, panSlate];
+setHeight(heiObj.moon, moon, 0);
+
+var earth = gui.one('#earth');
+var row2 = gui.one('#row2');
+var earSlate = gui.one('#earSlate');
+var pan2 = gui.one('#pan2');
+var panSlate2 = gui.one('#panSlate2');
+var win2 = gui.one('#win2');
+var underL2 = gui.one('#underL2');
+
+pan2Rem = extension(panSlate2, earSlate, 2);
+extender(panSlate2, pan2Rem);
+
+topObj.earth = [moon];
+setTop(topObj.earth, earth, 0);
+
+topObj.underL2 = [pan2, win2];
+setTop(topObj.underL2, underL2, 0);
+
+heiObj.earSlate = [pan2, win2, underL2];
+setHeight(heiObj.earSlate, earSlate, 0);
+
+heiObj.earth = [row1, earSlate];
+setHeight(heiObj.earth, earth, 1);
+
+var ozone = gui.one('#ozone');
+var endRow =  gui.one('#endRow');
+var endSlate = gui.one('#endSlate');
+var system = gui.one('#system');
+
+topObj.ozone = [moon, earth];
+setTop(topObj.ozone, ozone, 0);
+
+heiObj.ozone = [endRow, endSlate];
+setHeight(heiObj.ozone, ozone, 1);
+
+heiObj.system2 = [moon, earth, ozone];
+setHeight(heiObj.system2, system2, 0);
+
+heiObj.system = [sun, system2];
+setHeight(heiObj.system, system, 0);
+
+widObj.endSlate = [navSlate];
+setWidth(widObj.endSlate, endSlate, -3);
+
+
+});
+
+</script>
+
+</body>
+
