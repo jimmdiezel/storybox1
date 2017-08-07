@@ -11,6 +11,8 @@
 
 <body>
 
+<div id="abyss">
+
 <div id="space1">
 
 <ul id="index">
@@ -30,8 +32,6 @@
 
 <div id="sun">
 
-<div class="tab">
-</div>
 
 <div id="loginbox">
 </div>
@@ -55,21 +55,15 @@
 
 <div id="navbar2">
 
-<ul class="navbar" id="navSlate1">
+<ul class="navbar" id="panSlate1">
 
-<li id="update"><a>UPDATE</a></li>
-<li id="proxy"><a>PROXY</a></li>
-<li id="tracker"><a>TRACKER</a></li>
-<li id="records"><a>RECORDS</a></li>
-<li id="broadcast"><a>BROADCAST</a></li>
-<li id="locater"><a>LOCATER</a></li>
-<li id="admin"><a>ADMIN</a></li>
+<li><a>INPUT</a></li>
+<li><a>OUTPUT</a></li>
+<li><a>SYSTEM</a></li>
 
 </ul>
 
-<ul class="navbar" id="navSlate2">
 
-</ul>
 
 
 </div> <!-- navbar2 close -->
@@ -94,15 +88,21 @@
 
 <div class="panel2">
 
+<ul class="navbar" id="navSlate1">
 
-<ul class="navbar" id="panSlate1">
-
-<li><a>TOUCHSCREEN</a></li>
-<li><a>TELEVISION</a></li>
-<li><a>TELEPORT</a></li>
+<li id="update"><a>UPDATE</a></li>
+<li id="proxy"><a>PROXY</a></li>
+<li id="tracker"><a>TRACKER</a></li>
+<li id="records"><a>RECORDS</a></li>
+<li id="broadcast"><a>BROADCAST</a></li>
+<li id="locater"><a>LOCATER</a></li>
+<li id="admin"><a>ADMIN</a></li>
 
 </ul>
 
+<ul class="navbar" id="navSlate2">
+
+</ul>
 
 </div>
 
@@ -110,8 +110,7 @@
 
 <div class="window" id="win1">
 
-<div class="tab">
-</div>
+
 
 </div> <!-- window close -->
 
@@ -162,8 +161,6 @@
 
 <div class="window" id="win2">
 
-<div class="tab">
-</div>
 
 </div> <!-- window close -->
 
@@ -235,6 +232,8 @@
 
 </div> <!-- space3 close -->
 
+</div> <!-- abyss close -->
+
 <script language="Javascript">
 
 YUI().use('node', 'event', function (gui) {
@@ -305,17 +304,63 @@ widFig[m] = widCalc[m] * factor;
 
 }
 
+
+
+
+
+
+
+
 // spa3.setHTML(modulo + '.' + factor + '.' + subTotal);
 
 widFig[widSelect] = widFig[widSelect] + modulo;
 
 return widFig;
 
+
+
 } //divider end
+
+
+
+
+
+
+widProp = [];
+widProp = divider(bodProp2, span, 1);
+widProp[3] = widProp[1] - 1;
+
+if (widProp[0] > 100){
+
+spa1.setStyle('width', widProp[0] + 'px');
+spa2.setStyle('width', widProp[3] + 'px');
+spa2.setStyle('right', widProp[2] + 'px');
+spa3.setStyle('width', widProp[2] + 'px');
+
+}
+
+else {
+
+bodProp2 -= 25;
+span2 = [22, 8];
+widProp2 = divider(bodProp2, span2, 0);
+
+
+spa1.setStyle('width', '25px');
+spa2.setStyle('width', widProp2[0] + 'px');
+spa2.setStyle('right', widProp2[1] + 'px'); // change from 'widProp[2]'
+spa3.setStyle('width', widProp2[1] + 'px');
+
+}
+
 
 var navSlate2 = gui.one('#navSlate2');
 var navSlate1 = gui.one('#navSlate1');
 var navSlate = gui.one('#navSlate');
+var pan1 = gui.one('pan1');
+var panSlate = gui.one('#panSlate');
+var panSlate1 = gui.one('#panSlate1');
+var win1 = gui.one('#win1');
 
 var update = gui.one('#update');
 var proxy = gui.one('#proxy');
@@ -424,7 +469,7 @@ widTotall = parseInt (widTotal);
 
 factorA = pad + 1;
 factorB = factorA * setNum;
-factorC = factorB + 6;
+factorC = factorB + 4;
 
 widTotall -= factorC;
 
@@ -435,32 +480,7 @@ return widTotall;
 
 
 
-widProp = [];
-widProp = divider(bodProp2, span, 1);
-widProp[3] = widProp[1] - 1;
 
-if (widProp[0] > 100){
-
-spa1.setStyle('width', widProp[0] + 'px');
-spa2.setStyle('width', widProp[3] + 'px');
-spa2.setStyle('right', widProp[2] + 'px');
-spa3.setStyle('width', widProp[2] + 'px');
-
-}
-
-else {
-
-bodProp2 -= 25;
-span2 = [22, 8];
-widProp2 = divider(bodProp2, span2, 0);
-
-
-spa1.setStyle('width', '25px');
-spa2.setStyle('width', widProp2[0] + 'px');
-spa2.setStyle('right', widProp2[1] + 'px'); // change from 'widProp[2]'
-spa3.setStyle('width', widProp2[1] + 'px');
-
-}
 
 var loginbox = gui.one('#loginbox');
 var logo = gui.one('#logo');
@@ -604,7 +624,7 @@ sla2Num++;
 
 nav1Heightt = getHeight(topDeck);
 nav2Heightt = getHeight(bottomDeck);
-totHeightt = nav1Heightt + nav2Heightt + 4;
+totHeightt = nav1Heightt + nav2Heightt + 3;
 space.setStyle('height', totHeightt + 'px');
 
 }
@@ -612,7 +632,7 @@ space.setStyle('height', totHeightt + 'px');
 else{
 
 nav1Height = getHeight(topDeck);
-totHeightt = nav1Height + 4;
+totHeightt = nav1Height + 3;
 space.setStyle('height', totHeightt + 'px');
 
 
@@ -622,25 +642,33 @@ space.setStyle('height', totHeightt + 'px');
 
 } //twoDeck end
 
-twoDeck(navSlate1, navSlate2, navSlate);
+twoDeck(navSlate1, navSlate2, pan1);
 
 topObj.row1 = [];
 topObj.row1[0] = navSlate;
 setTop(topObj.row1, row1, 0);
 
-navRem = extension(navSlate1, navSlate, 2);
+navRem = extension(navSlate1, navSlate, 4);
 
 extender(navSlate1, navRem);
 
-navRem2 = extension(navSlate2, navSlate, 2);
+navRem2 = extension(navSlate2, navSlate, 4);
 
 extender(navSlate2, navRem2);
 
-panSlate = gui.one('#panSlate');
-panSlate1 = gui.one('#panSlate1');
-
-panRem = extension(panSlate1, panSlate, 2);
+panRem = extension(panSlate1, panSlate, 4);
 extender(panSlate1, panRem);
+
+topObj.win1 = [];
+topObj.win1 = [navSlate1, navSlate2];
+setTop(topObj.win1, win1, 4);
+
+
+
+
+
+
+
 
 topObj.row1 = [];
 topObj.row1[0] = navSlate;
@@ -681,7 +709,7 @@ var panSlate2 = gui.one('#panSlate2');
 var win2 = gui.one('#win2');
 var underL2 = gui.one('#underL2');
 
-pan2Rem = extension(panSlate2, earSlate, 2);
+pan2Rem = extension(panSlate2, earSlate, 4);
 extender(panSlate2, pan2Rem);
 
 topObj.earth = [moon];
@@ -713,8 +741,7 @@ setHeight(heiObj.system2, system2, 0);
 heiObj.system = [sun, system2];
 setHeight(heiObj.system, system, 0);
 
-widObj.endSlate = [navSlate];
-setWidth(widObj.endSlate, endSlate, -3);
+
 
 
 });
