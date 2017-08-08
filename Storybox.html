@@ -333,7 +333,8 @@ widProp[3] = widProp[1] - 1;
 if (widProp[0] > 100){
 
 spa1.setStyle('width', widProp[0] + 'px');
-spa2.setStyle('width', widProp[3] + 'px');
+widAdj = widProp[0];
+spa2.setStyle('left', widAdj + 'px');
 spa2.setStyle('right', widProp[2] + 'px');
 spa3.setStyle('width', widProp[2] + 'px');
 
@@ -347,7 +348,7 @@ widProp2 = divider(bodProp2, span2, 0);
 
 
 spa1.setStyle('width', '25px');
-spa2.setStyle('width', widProp2[0] + 'px');
+spa2.setStyle('left', '29px');
 spa2.setStyle('right', widProp2[1] + 'px'); // change from 'widProp[2]'
 spa3.setStyle('width', widProp2[1] + 'px');
 
@@ -604,7 +605,7 @@ w = 'width';
 
 widBarr = getWidth(topDeck);
 widSpace = getWidth(space);
-widSpacee = widSpace - 6;
+widSpacee = widSpace - 40;
 
 setFig = setup(topDeck);
 setNum = setFig.length;
