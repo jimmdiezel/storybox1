@@ -17,10 +17,10 @@
 
 <ul id="index">
 
-<li><a>CHICKENNCHIPS</a></li>
-<li><a>ALDO</a></li>
-<li><a>FRANKWRIGHT</a></li>
-<li><a>TEDTHEMOVIE</a></li>
+<li id="ind1"><a>CHICKENNCHIPS</a></li>
+<li id="ind2"><a>ALDO</a></li>
+<li id="ind3"><a>FRANKWRIGHT</a></li>
+<li id="ind4"><a>TEDTHEMOVIE</a></li>
 
 </ul>
 
@@ -37,9 +37,11 @@
 </div>
 
 <div id="logo">
+<img src="RLogo.jpg" width=100% height=100% />
 </div>
 
 <div id="version">
+<img src="BackgroundJPG2.jpg" width=100% height=100% />
 </div>
 
 </div> <!-- sun close -->
@@ -57,9 +59,9 @@
 
 <ul class="navbar" id="panSlate1">
 
-<li><a>INPUT</a></li>
-<li><a>OUTPUT</a></li>
-<li><a>SYSTEM</a></li>
+<li class="navone" id="output"><a>OUTPUT</a></li>
+<li id="input"><a>INPUT</a></li>
+<li class="navend" id="system3"><a>SYSTEM</a></li>
 
 </ul>
 
@@ -90,13 +92,13 @@
 
 <ul class="navbar" id="navSlate1">
 
-<li id="update"><a>UPDATE</a></li>
-<li id="proxy"><a>PROXY</a></li>
-<li id="tracker"><a>TRACKER</a></li>
-<li id="records"><a>RECORDS</a></li>
-<li id="broadcast"><a>BROADCAST</a></li>
-<li id="locater"><a>LOCATER</a></li>
-<li id="admin"><a>ADMIN</a></li>
+<li class="navone" id="update"><a>UPDATE</a></li>
+<li id="agents"><a>AGENTS</a></li>
+<li id="cycles"><a>CYCLES</a></li>
+<li id="networks"><a>NETWORKS</a></li>
+<li id="comms"><a>COMMS</a></li>
+<li id="archive"><a>ARCHIVE</a></li>
+<li class="navend" id="admin"><a>ADMIN</a></li>
 
 </ul>
 
@@ -147,10 +149,8 @@
 
 <ul class="navbar" id="panSlate2">
 
-<li><a>EARTH</a></li>
-<li><a>EDIT</a></li>
-<li><a>SETTINGS</a></li>
-<li><a>VARIABLES</a></li>
+<li class="navone" id="target"><a>TARGET</a></li>
+<li class="navend" id="dataType"><a>DATATYPE</a></li>
 
 </ul>
 
@@ -201,7 +201,7 @@
 
 <div id="stars">
 
-<div class="canvas">
+<div class="canvas" id="starCanvas">
 
 <div id="starBar">
 </div>
@@ -217,6 +217,8 @@
 <div id="space3">
 
 <div class="canvas" id="sp3Canvas">
+
+
 
 <div id="sp3Bar">
 
@@ -236,7 +238,7 @@
 
 <script language="Javascript">
 
-YUI().use('node', 'event', function (gui) {
+YUI().use('node', 'event', 'event-mouseenter', 'event-hover', 'transition', function (gui) {
 
 var spa1  = gui.one('#space1');
 var spa2  = gui.one('#space2');
@@ -244,6 +246,7 @@ var spa3  = gui.one('#space3');
 var abyss1 = gui.one('#abyss1');
 
 var sp3Canvas = gui.one('#sp3Canvas');
+var starCanvas = gui.one('#starCanvas');
 
 
 var bodProp = gui.one('body');
@@ -278,6 +281,16 @@ return targetGeomm;
 
 } //getHeight end
 
+function getRight(target){
+
+targetGeom = target.getStyle('right');
+targetGeomm = parseInt(targetGeom);
+
+return targetGeomm;
+
+} //getWidth end
+
+
 function divider(widTotal, widCalc, widSelect){
 
 var j = widCalc.length;
@@ -304,33 +317,19 @@ widFig[m] = widCalc[m] * factor;
 
 }
 
-
-
-
-
-
-
-
 // spa3.setHTML(modulo + '.' + factor + '.' + subTotal);
 
 widFig[widSelect] = widFig[widSelect] + modulo;
 
 return widFig;
 
-
-
 } //divider end
-
-
-
-
-
 
 widProp = [];
 widProp = divider(bodProp2, span, 1);
 widProp[3] = widProp[1] - 1;
 
-if (widProp[0] > 100){
+if (widProp[0] > 140){
 
 spa1.setStyle('width', widProp[0] + 'px');
 widAdj = widProp[0];
@@ -364,16 +363,14 @@ var panSlate1 = gui.one('#panSlate1');
 var win1 = gui.one('#win1');
 
 var update = gui.one('#update');
-var proxy = gui.one('#proxy');
-var tracker = gui.one('#tracker');
-var records = gui.one('#records');
-var broadcast = gui.one('#broadcast');
-var locater = gui.one('#locater');
+var agents = gui.one('#agents');
+var cycles = gui.one('#cycles');
+var networks = gui.one('#networks');
+var comms = gui.one('#comms');
+var archive = gui.one('#archive');
 var admin = gui.one('#admin');
 
-var navSlateObj = [update, proxy, tracker, records, broadcast, locater, admin];
-
-
+var navSlateObj = [update, agents, cycles, networks, comms, archive, admin];
 
 function setup (set){
 
@@ -389,6 +386,8 @@ setNext = setFig[j].next();
 j++
 
 }
+
+
 
 return setFig;
 
@@ -479,10 +478,6 @@ return widTotall;
 
 } // extension end
 
-
-
-
-
 var loginbox = gui.one('#loginbox');
 var logo = gui.one('#logo');
 var version = gui.one('#version');
@@ -496,7 +491,6 @@ var sp3Bar = gui.one('#sp3Bar');
 var stars = gui.one('#stars');
 var starBar = gui.one('#starBar');
 
-stars.setStyle('height', winHeight + 'px');
 
 function setTop (set, target, extra){
 
@@ -507,7 +501,6 @@ for (j = 0; j < set.length; j++){
 
 add = getHeight(set[j]);
 setAdd += add;
-
 
 }
 
@@ -571,12 +564,13 @@ target.setStyle('left', setAdd + 'px');
 
 }
 
+
 topObj = [];
 topObj.logo = [loginbox];
-setTop(topObj.logo, logo, 1);
+setTop(topObj.logo, logo, 2);
 
 topObj.version = [loginbox];
-setTop(topObj.version, version, 1);
+setTop(topObj.version, version, 2);
 
 widObj = [];
 heiObj = [];
@@ -605,7 +599,7 @@ w = 'width';
 
 widBarr = getWidth(topDeck);
 widSpace = getWidth(space);
-widSpacee = widSpace - 40;
+widSpacee = widSpace - 45;
 
 setFig = setup(topDeck);
 setNum = setFig.length;
@@ -627,6 +621,8 @@ nav1Heightt = getHeight(topDeck);
 nav2Heightt = getHeight(bottomDeck);
 totHeightt = nav1Heightt + nav2Heightt + 3;
 space.setStyle('height', totHeightt + 'px');
+comms.setStyle('border-left', '1px solid #ACACAC');
+networks.setStyle('border-right', '1px solid #ACACAC');
 
 }
 
@@ -636,18 +632,61 @@ nav1Height = getHeight(topDeck);
 totHeightt = nav1Height + 3;
 space.setStyle('height', totHeightt + 'px');
 
+}
+
+} //twoDeck end
+
+
+
+
+
+
+
+
+function navDropList(deck, space){
+
+heiUpdate = getHeight(update);
+widSpace2 = getWidth(space);
+
+widSpace2 = widSpace2 - heiUpdate - 1;
+deck.setStyle('width', widSpace2 + 'px');
+
+widDrop = widSpace2 - 6;
+widSet = setup(deck);
+widNum = widSet.length; 
+
+deck.replaceClass('navbar', 'dropBar');
+update.setStyle('border-bottom', '1px solid #ACACAC');
+admin.setStyle('border-bottom', '1px solid #ACACAC');
+
+for (s = 0; s < widNum; s++){
+
+widItem = widSet[s];
+widItem.setStyle('width', widDrop + 'px');
 
 }
 
 
+for (t = 1; t < widNum; t++){
 
-} //twoDeck end
+visItem = widSet[t];
+visItem.setStyle('visibility', 'hidden');
+
+}
+
+}
+
+nav1Width = getWidth(navSlate1);
+
+if(nav1Width < 300){
+
+navDropList(navSlate1, pan1);
+
+}
+
+else{
 
 twoDeck(navSlate1, navSlate2, pan1);
-
-topObj.row1 = [];
-topObj.row1[0] = navSlate;
-setTop(topObj.row1, row1, 0);
 
 navRem = extension(navSlate1, navSlate, 4);
 
@@ -657,18 +696,20 @@ navRem2 = extension(navSlate2, navSlate, 4);
 
 extender(navSlate2, navRem2);
 
+}
+
+
 panRem = extension(panSlate1, panSlate, 4);
 extender(panSlate1, panRem);
 
+topObj.row1 = [];
+topObj.row1[0] = navSlate;
+setTop(topObj.row1, row1, 0);
+
 topObj.win1 = [];
-topObj.win1 = [navSlate1, navSlate2];
-setTop(topObj.win1, win1, 4);
 
-
-
-
-
-
+topObj.win1 = [update, navSlate2];
+setTop(topObj.win1, win1, 6);
 
 
 topObj.row1 = [];
@@ -697,7 +738,7 @@ var moon = gui.one('#moon');
 
 lefObj = [];
 lefObj.version = [logo];
-setLeft(lefObj.version, version, 3);
+setLeft(lefObj.version, version, 4);
 
 heiObj.moon = [navSlate, row1, panSlate];
 setHeight(heiObj.moon, moon, 0);
@@ -742,8 +783,168 @@ setHeight(heiObj.system2, system2, 0);
 heiObj.system = [sun, system2];
 setHeight(heiObj.system, system, 0);
 
+heiObj.starBar = [navSlate];
+setHeight(heiObj.starBar, starBar, 5);
+
+heiObj.star = [system2];
+setHeight(heiObj.star, stars, 0);
 
 
+
+input = gui.one('#input');
+output = gui.one('#output');
+system3 = gui.one('#system3');
+items = gui.one('.navbar li');
+
+target = gui.one('#target');
+dataType = gui.one('#dataType');
+
+ind1 = gui.one('#ind1');
+ind2 = gui.one('#ind2');
+ind3 = gui.one('#ind3');
+ind4 = gui.one('#ind4');
+
+
+function listOver(){
+
+this.transition({
+
+easing: 'ease-in-out',
+delay: 0.2,
+duration: 0.6,
+background: '#89C2C2',
+color: '#E6E6E6',
+
+});
+
+}
+
+function listOut(){
+
+this.transition({
+
+easing: 'ease-in-out',
+delay: 0.1,
+duration: 0.4,
+background: '#DDEEEE',
+color: '#000000',
+
+});
+
+}
+
+
+
+function listHoverTrans (setAdd){
+
+hoverList = [input, output, system3, target, dataType, update, agents, cycles, networks, comms, archive, admin];
+
+q = 12;
+
+setNext = setAdd.one('li');
+
+while (setNext != undefined){
+
+hoverList[q] = setNext;
+setNext = hoverList[q].next();
+q++
+
+}
+
+return hoverList;
+
+}
+
+index = gui.one('#index');
+hoverList = listHoverTrans (index);
+
+
+a = 0;
+
+for(a = 0; a < hoverList.length; a++){
+
+hoverTarget = hoverList[a];
+
+hoverTarget.on('hover', listOver, listOut);
+
+}
+
+function indexOut(){
+
+this.transition({
+
+easing: 'ease-in-out',
+delay: 0.2,
+duration: 0.6,
+width: '150px',
+
+});
+
+}
+
+function indexIn(){
+
+this.transition({
+
+easing: 'ease-in-out',
+delay: 0.2,
+duration: 0.6,
+width: '25px',
+
+});
+
+}
+
+widSpa1 = getWidth(spa1);
+
+if (widSpa1 < 50){
+
+spa1.on('hover', indexOut, indexIn);
+
+}
+
+button1 = gui.one('#button1');
+
+function spa3Trans (){
+
+widStars = getWidth(stars);
+rigSpa2 = getRight(spa2);
+widSpa3 = getWidth(spa3);
+
+widTrans = widSpa3 + widStars;
+
+if (widSpa3 == rigSpa2){
+
+widTranss = widTrans + 'px';
+
+spa3.transition({
+
+easing: 'ease-in-out',
+delay: 0.2,
+duration: 0.6,
+width: widTranss,
+
+});
+
+}
+
+else {
+
+rigSpaa = rigSpa2 + 'px';
+
+spa3.transition({
+
+easing: 'ease-in-out',
+delay: 1.0,
+duration: 0.4,
+width: rigSpaa,
+
+});
+
+}
+
+}
+button1.on('mouseenter', spa3Trans);
 
 });
 
