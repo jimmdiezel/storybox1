@@ -1,0 +1,107 @@
+
+h1{
+margin: 5px 2px 0px 3px;
+padding: 3px 7px 3px 7px;
+font-size: 18px;
+font-color: #333333;
+background: #EEF6F6;
+border: 1px solid #ACACAC;
+font-weight: normal;
+font-variant: small-caps;
+background: linear-gradient(to right,  #DDEEEE, #EEF6F6);
+}
+.textboxA{
+float: left;
+background: #FFFFFF;
+margin: 2px 2px 0px 3px;
+padding-bottom: 1px;
+border: 1px solid #ACACAC;
+font-family: "Century Gothic", Verdana, "Trebuchet MS";
+font-size: 14px;
+}
+
+.textboxB{
+float: left;
+background: #FFFFFF;
+margin: 1px;
+border: 1px solid #ACACAC;
+font-family: "Century Gothic", Verdana, "Trebuchet MS";
+font-size: 14px;
+}
+
+/*
+.textboxA{
+position: absolute;
+background: #FFFFFF;
+top: 1px;
+right: 1px;
+left: 1px;
+bottom: 1px;
+border: 1px solid #ACACAC;
+font-family: "Century Gothic", Verdana, "Trebuchet MS";
+font-size: 14px;
+}
+*/
+
+.headA{
+float: left;
+background: linear-gradient(to right,  #BCDCDC, #EEF6F6);
+margin: 0px;
+width: 100%;
+
+padding: 0px;
+border-bottom: 1px dotted #ACACAC;
+}
+
+.textA{
+float: left;
+margin: 3px 12px 3px 12px;
+}
+
+h2{
+margin: 2px 10px 2px 10px;
+font-size: 17px;
+font-color: #333333;
+font-family: "Century Gothic", Verdana, "Trebuchet MS";
+font-weight: normal;
+font-variant: small-caps;
+}
+
+.intextBorderA{
+float: left;
+margin: 1px 2px 1px 2px;
+background: #3D7676;
+padding: 0px;
+border: 1px solid #ACACAC;
+font-family: "Century Gothic", Verdana, "Trebuchet MS";
+font-size: 14px;
+z-index: 2;
+}
+
+/*
+.textBorder{
+position: absolute;
+background: #FFFFFF;
+top: 60px;
+right: -10px;
+left: 40px;
+background: #3D7676;
+height: 80px;
+border: 1px solid #ACACAC;
+font-family: "Century Gothic", Verdana, "Trebuchet MS";
+font-size: 14px;
+}
+*/
+
+
+
+
+h3{
+margin: 0px;
+margin-left: 10px;
+font-size: 16px;
+font-color: #333333;
+font-weight: normal;
+font-variant: small-caps;
+}
+
