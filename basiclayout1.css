@@ -1,6 +1,6 @@
 body{
 margin:0px;
-background: url(BackgroundJPG2.jpg);
+background-image: url("BackgroundJPG2.png");
 background-attachment: fixed;
 font-family: "Century Gothic", Verdana, "Trebuchet MS";
 transition: all 0.5s;
@@ -14,7 +14,7 @@ bottom: 0px;
 left: 0px;
 Width: 120px;
 border-right: 1px solid #ACACAC;
-background: linear-gradient(to right,  #CDE5E5, #EEF6F6);
+background: linear-gradient(to bottom,  #CDE5E5, #E9E9E9);
 overflow: hidden;
 z-index: 2;
 transition: width 0.5s;
@@ -29,10 +29,11 @@ font-size: 17px;
 }
 
 ul li{
-transition: all 0.6s;
-transition-delay: 0.3s;
+transition: all 0.8s;
+transition-delay: 0.2s;
 transition-timing-function: ease-in-out;
 }
+
 
 
 
@@ -43,14 +44,15 @@ padding: 0px;
 }
 
 ul#index li{
-height: 2.6em;
+padding-top: 0.5em;
+height: 2.0em;
 border-bottom: 1px dotted #ACACAC;
 color: #333333;
 }
 
 ul#index a{
-margin-top: 6px;
-margin-left: 12px;
+margin-top: 20px;
+margin-left: 14px;
 font-family: "Century Gothic", Verdana, "Trebuchet MS";
 width: 50px;
 }
@@ -116,7 +118,7 @@ left: 1px;
 right: 0px;
 border-bottom: 1px solid #ACACAC;
 border-left: 1px solid #ACACAC;
-background: linear-gradient(to right,  #BCDCDC, #EEF6F6);
+background: linear-gradient(to left,  #CDE5E5, #EEF6F6);
 }
 
 #logo{
@@ -166,16 +168,6 @@ right: 0px;
 /* background: #89CA9D; */
 }
 
-#poster{
-position: absolute;
-left: 50px;
-right: 50px;
-top: 5px;
-bottom: 5px;
-border: 1px solid #ACACAC;
-
-}
-
 
 .canvas{
 position: absolute;
@@ -185,7 +177,10 @@ right: 2px;
 left: 2px;
 border: 1px solid #ACACAC;
 background: white;
+overflow: hidden;
 }
+
+
 
 #starCanvas{
 top: 0px;
@@ -200,7 +195,15 @@ right: 0px;
 left: 0px;
 height: 20px;
 border-bottom: 1px solid #ACACAC;
-background: linear-gradient(to right,  #BCDCDC, #EEF6F6);
+background: linear-gradient(to left,  #CDE5E5, #EEF6F6);
+}
+
+#sp3Win{
+position: absolute;
+top: 100px;
+bottom: 0px;
+left: 0px;
+width: 100px;
 }
 
 
@@ -211,10 +214,9 @@ top: 3px;
 bottom: 3px;
 left: 3px;
 right: 3px;
-background: #DDEEEE;
-transition: all 0.4s;
-transition-delay: 0.2s;
+transition: all 0.8s;
 transition-timing-function: ease-in-out;
+background: linear-gradient(to left,  #BCDCDC, #CDE5E5);
 }
 
 #button1{
@@ -224,7 +226,9 @@ bottom: 0px;
 right: 0px;
 width: 2em;
 border-left: 1px dotted #ACACAC;
-background: #DDEEEE;
+background: linear-gradient(to left,  #BCDCDC, #CDE5E5);
+
+/* linear-gradient(to right,  #CCE5E5, #BCDCDC); */
 }
 
 #starBar{
@@ -234,7 +238,7 @@ right: 0px;
 left: 0px;
 height: 20px;
 border-bottom: 1px dotted #ACACAC;
-background: linear-gradient(to right,  #BCDCDC, #EEF6F6);
+background: linear-gradient(to left,  #CDE5E5, #EEF6F6);
 }
 
 .slate1{
@@ -275,6 +279,7 @@ background: #3D7676;
 overflow: visible;
 }
 
+
 ul.navbar{
 float: left;
 margin-top: 1px;
@@ -282,7 +287,7 @@ margin-left: 1px;
 margin-bottom: 1px;
 padding: 0px;
 margin-bottom: 0px;
-background: linear-gradient(to right,  #DDEEEE, #EEF6F6);
+background: linear-gradient(to left,  #DDEEEE, #EEF6F6);
 }
 
 ul.navbar li{
@@ -295,7 +300,8 @@ border-top: 1px solid #ACACAC;
 border-bottom: 1px solid #ACACAC;
 padding-left: 2px;
 padding-right: 2px;
-color: #333333;
+color: #1A1A1A;
+background: linear-gradient(to left,  #DDEEEE, #EEF6F6);
 }
 
 ul.dropBar{
@@ -305,6 +311,7 @@ left: 1px;
 padding: 0px;
 z-index: 1;
 margin: 0px;
+background: linear-gradient(to left,  #DDEEEE, #EEF6F6);
 }
 
 ul.dropBar li{
@@ -318,7 +325,7 @@ border-bottom: 1px transparent #ACACAC;
 padding-left: 2px;
 padding-right: 2px;
 color: #333333;
-background: #EEF6F6;
+background: linear-gradient(to left,  #DDEEEE, #EEF6F6);
 }
 
 /*
@@ -333,8 +340,8 @@ position: absolute;
 right: 0px;
 top: 1px;
 bottom: 1px;
-background: #DDEEEE;
-width: 20px;
+background: linear-gradient(to right,  #CCE5E5, #BCDCDC);
+width: 21px;
 border-right: 1px solid #ACACAC;
 border-top: 1px solid #ACACAC;
 border-bottom: 1px solid #ACACAC;
@@ -346,7 +353,7 @@ right: 1px;
 left: 1px;
 top: 1px;
 bottom: 1px;
-background: #DDEEEE;
+background: linear-gradient(to right,  #CCE5E5 #BCDCDC);
 transition: all 0.4s;
 transition-delay: 0.2s;
 transition-timing-function: ease-in-out;
@@ -367,26 +374,8 @@ border-bottom: 1px solid #ACACAC;
 padding-left: 2px;
 }*/
 
-#oldkent{
-border-top: 1px solid #ACACAC;
-border-left: 1px solid #ACACAC;
-}
-
-#oksociety{
-border-left: 1px solid #ACACAC;
-border-top: 1px solid #ACACAC;
-}
 
 
-#reboot{
-border-left: 1px solid #ACACAC;
-border-top: 1px solid #ACACAC;
-}
-
-#dataset{
-border-left: 1px solid #ACACAC;
-border-top: 1px solid #ACACAC;
-}
 
 #output{
 border-right: 1px solid #ACACAC;
@@ -536,6 +525,7 @@ top: 0px;
 top: 4px;
 height: 5em;
 border-top: 1px solid #ACACAC;
+background: linear-gradient(to bottom, #3D7676, #E6E6E6);
 }
 
 #endLeft{
@@ -545,7 +535,7 @@ bottom: -1px;
 width: 1px;
 right: 0px;
 border-right: 1px solid #ACACAC;
-background: #3D7676;
+background: linear-gradient(to bottom, #3D7676, #E6E6E6);
 }
 
 #endCanvas{

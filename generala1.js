@@ -1,49 +1,22 @@
-
-
-YUI().use('node', 'event', 'event-mouseenter', 'event-hover', 'transition', function (gui) {
-
 /* Window Items */
 
-//var bodPropx = gui.one('body');
 bodProp = document.body;
-
-var window = gui.one('body').get('winWidth');
-// var winWidth = window;
-var winHeight = gui.one('body').get('winHeight');
-winHeight = parseInt(winHeight);
 
 /* General Items */
 
-//var spa1x  = gui.one('#space1');
-//var spa2  = gui.one('#space2');
-//var spa3  = gui.one('#space3');
 var spa1 = document.getElementById('space1');
 var spa2 = document.getElementById('space2');
 var spa3 = document.getElementById('space3');
 
-//var sp3Canvas = gui.one('#sp3Canvas');
-//var starCanvas = gui.one('#starCanvas');
 var sp3Canvas = document.getElementById('sp3Canvas');
 var starCanvas = document.getElementById('starCanvas');
 
-//var navSlate2 = gui.one('#navSlate2');
-//var navSlate1 = gui.one('#navSlate1');
-//var navSlate = gui.one('#navSlate');
-//var panSlate = gui.one('#panSlate');
-//var panSlate1 = gui.one('#panSlate1');
 var navSlate2 = document.getElementById('navSlate2');
 var navSlate1 = document.getElementById('navSlate1');
 var navSlate = document.getElementById('navSlate');
 var panSlate = document.getElementById('panSlate');
 var panSlate1 = document.getElementById('panSlate1');
 
-//var reboot = gui.one('#reboot');
-//var tribes = gui.one('#tribes');
-//var cycles = gui.one('#cycles');
-//var zones = gui.one('#zones');
-//var comms = gui.one('#comms');
-//var vault = gui.one('#vault');
-//var admin = gui.one('#admin');
 var reboot = document.getElementById('reboot');
 var tribes = document.getElementById('tribes');
 var cycles = document.getElementById('cycles');
@@ -52,49 +25,22 @@ var comms = document.getElementById('comms');
 var vault = document.getElementById('vault');
 var admin = document.getElementById('admin');
 
-//var oksociety = gui.one('#oksociety');
-//var mayfair = gui.one('#mayfair');
-//var artbook = gui.one('#artbook');
-//var studykit = gui.one('#studykit');
-//var doczone = gui.one('#doczone');
-//var timemap = gui.one('#timemap');
-//var bootsale = gui.one('#bootsale');
-//var budlist = gui.one('#budlist');
-//var postbox = gui.one('#postbox');
 var oksociety = document.getElementById('oksociety');
 var mayfair = document.getElementById('mayfair');
-var artbook = document.getElementById('artbook');
-var studykit = document.getElementById('studykit');
-var doczone = document.getElementById('doczone');
 var timemap = document.getElementById('timemap');
-var bootsale = document.getElementById('bootsale');
-var budlist = document.getElementById('budlist');
+var teamsheet = document.getElementById('teamsheet');
+var artbook = document.getElementById('artbook');
+var doczone = document.getElementById('doczone');
+var yardsale = document.getElementById('yardsale');
 var postbox = document.getElementById('postbox');
 
-//var output = gui.one('#output');
-//var input = gui.one('#input');
-//var oldkent = gui.one('#oldkent');
-//var target = gui.one('#target');
-//var datatype = gui.one('#datatype');
-//var notes = gui.one('#notes');
 var output = document.getElementById('output');
 var input = document.getElementById('input');
-var oldkent = document.getElementById('oldkent');
+var admin = document.getElementById('admin');
 var target = document.getElementById('target');
 var datatype = document.getElementById('datatype');
 var notes = document.getElementById('notes');
 
-//var system2 = gui.one('#system2');
-//var stars = gui.one('#stars');
-//var logo = gui.one('#logo');
-//var loginbox = gui.one('#loginbox');
-//var sun = gui.one('#sun');
-//var version = gui.one('#version');
-//var pan1 = gui.one('#pan1');
-//var sp3Bar = gui.one('#sp3Bar');
-//var row1 = gui.one('#row1');
-//var underL1 = gui.one('#underL1');
-//var win1 = gui.one('#win1');
 var stars = document.getElementById('stars');
 var system2 = document.getElementById('system2');
 var logo = document.getElementById('logo');
@@ -106,16 +52,9 @@ var sp3Bar = document.getElementById('sp3Bar');
 var row1 = document.getElementById('row1');
 var underL1 = document.getElementById('underL1');
 var win1 = document.getElementById('win1');
+var poster = document.getElementById('poster');
+var sp3Win = document.getElementById('sp3Win');
 
-//var moon = gui.one('#moon');
-//var earth = gui.one('#earth');
-//var pan2 = gui.one('#pan2');
-//var win2 = gui.one('#win2');
-//var underL2 = gui.one('#underL2');
-//var earSlate = gui.one('#earSlate');
-//var starBar = gui.one('#starBar');
-//var row2 = gui.one('#row2');
-//var panSlate2 = gui.one('#panSlate2');
 var earth = document.getElementById('earth');
 var moon = document.getElementById('moon');
 var pan2 = document.getElementById('pan2');
@@ -126,61 +65,49 @@ var starBar = document.getElementById('starBar');
 var row2 = document.getElementById('row2');
 var panSlate2 = document.getElementById('panSlate2');
 
-//var ozone = gui.one('#ozone');
-//var endRow =  gui.one('#endRow');
-//var endSlate = gui.one('#endSlate');
-//var system = gui.one('#system');
 var ozone = document.getElementById('ozone');
 var endRow = document.getElementById('endRow');
 var endSlate = document.getElementById('endSlate');
 var system = document.getElementById('system');
 
-//directory = gui.one('#directory');
-//dataset = gui.one('#dataset');
 var directory = document.getElementById('directory');
 var dataset = document.getElementById('dataset');
 
-//ind1 = gui.one('#ind1');
-//ind2 = gui.one('#ind2');
-//ind3 = gui.one('#ind3');
-//ind4 = gui.one('#ind4');
 var ind1 = document.getElementById('ind1');
 var ind2 = document.getElementById('ind2');
 var ind3 = document.getElementById('ind3');
 var ind4 = document.getElementById('ind4');
 
-//index = gui.one('#index');
-//navbar = gui.one('#navbar');
 var index = document.getElementById('index');
 var navbar = document.getElementById('navbar');
 
-//dropB1 = gui.one('#dropButton1');
-//dropB2 = gui.one('#dropButton2');
-//dropB3 = gui.one('#dropButton3');
 var dropB1 = document.getElementById('dropButton1');
 var dropB2 = document.getElementById('dropButton2');
 var dropB3 = document.getElementById('dropButton3');
 
-//dropInB1 = gui.one('#dropIn1');
-//dropInB2 = gui.one('#dropIn2');
-//dropInB3 = gui.one('#dropIn3');
 var dropInB1 = document.getElementById('dropIn1');
 var dropInB2 = document.getElementById('dropIn2');
 var dropInB3 = document.getElementById('dropIn3');
 
-//button1 = gui.one('#button1');
-//inButton1 = gui.one('#inButton1');
 var button1 = document.getElementById('button1');
 var inButton1 = document.getElementById('inButton1');
 
+var directShort = document.getElementById('directShort');
+var directIntro = document.getElementById('directIntro');
+var directSocial = document.getElementById('directSocial');
+var directLast = document.getElementById('directLast');
+var pillar6 = document.getElementById('pillar6');
+
+
 // KEEP INDEX FIRST IN NAVSELECTION
-navSelection = [ind1, oldkent, oksociety, dataset];
 
-firstNavItem = navSlate1.firstElementChild;
-//firstNavItem = navSlate1.one('li');
 
-//lastNavItem = navSlate1.all('li').slice(-1).item(0);
-lastNavItem = navSlate1.lastElementChild;
+
+
+
+navSelection = [ind1, output, mayfair, directory];
+firstNavItemF = function () {return navSlate1.firstElementChild};
+lastNavItemF = function () {return navSlate1.lastElementChild};
 
 span = [5, 22, 8];
 reset = {};
@@ -203,28 +130,31 @@ return reset.no;
 
 }
 
-
 }
-
-
-
-
-
 
 function bodPropGet(){
 
-//var bodProp1x = bodPropx.getStyle('width');
-bodProp1 = window;
-bodProp1 = parseInt(bodProp1);
+bodProp1 = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
 return bodProp1;
+
+}
+
+function bodHeightGet(){
+
+bodProp2 = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+
+return bodProp2;
 
 }
 
 function getWidth(target){
 
-
 targetGeom = target.clientWidth;
-// targetGeom = target.getStyle('width');
 targetGeomm = parseInt(targetGeom);
 
 return targetGeomm;
@@ -236,7 +166,6 @@ return targetGeomm;
 function getHeight(target){
 
 targetGeom = target.clientHeight;
-//targetGeom = target.getStyle('height');
 targetGeomm = parseInt(targetGeom);
 
 return targetGeomm;
@@ -276,8 +205,6 @@ widFig[m] = widCalc[m] * factor;
 
 }
 
-// spa3.setHTML(modulo + '.' + factor + '.' + subTotal);
-
 widFig[widSelect] = widFig[widSelect] + modulo;
 
 return widFig;
@@ -302,9 +229,6 @@ j++
 return setFig;
 
 } //setup end
-
-
-
 
 function extender (set, space, widList, pad){
 
@@ -403,7 +327,6 @@ widSet[d] = setAdd2;
 return widSet;
 
 } // extSetupB end
-
 
 /* Framework Functions */
 
@@ -545,6 +468,8 @@ widSpaceSaverr = widSpaceSaver + 50;
 widSpace = getWidth(space);
 widSpacee = widSpace - widSpaceSaverr;
 
+firstNavItem = firstNavItemF();
+lastNavItem = lastNavItemF();
 nav1Height = getHeight(firstNavItem);
 nav2Height = getHeight(lastNavItem);
 
@@ -594,20 +519,29 @@ twoDeckRewind();
 
 }
 
-//nav1Heightt = getHeight(firstNavItem);
-//navtotHeightt = nav1Heightt + 3;
-//space.setStyle('height', navtotHeightt + 'px');
-
-
-
+lastNavItem = lastNavItemF();
 totHeightt = nav1Height + 5;
 space.style.height = totHeightt + 'px';
 lastNavItem.style.borderRight = '1px solid #ACACAC';
-//lastNavItem.setStyle('border-right',  '1px solid #ACACAC');
 
 }
 
 } //twoDeck end
+
+function navSelectReset(){
+
+var dropBarSet = [panSlate1, navSlate1, panSlate2];
+
+for(u = 0, v = 1; u < dropBarSet.length; u++, v++){
+
+dropBarHold = dropBarSet[u];
+itemSelectHold = navSelection[v];
+
+dropBarHold.prepend(itemSelectHold);
+
+}
+
+}
 
 function navDropList(deck, space){
 
@@ -617,17 +551,14 @@ widDrop = widSpace2 - 6;
 widSet = setup(deck);
 widNum = widSet.length; 
 
-//boxHeightt = getHeight(firstNavItem);
-//boxHeightt += 1;
-//pan1.setStyle('height', boxHeightt + 'px');
-
 deck.className = 'dropBar';
-
 
 s = 0;
 
 topItem = widSet[s];
 topItem.style.borderBottom = '1px solid #ACACAC';
+topItem.style.borderLeft = '1px solid #ACACAC';
+topItem.style.borderTop = '1px solid #ACACAC';
 topItem.style.borderRight = '1px dotted #ACACAC';
 
 for (s = 0; s < widNum; s++){
@@ -654,20 +585,16 @@ selectLength = navSelection.length;
 while(y < 4 && y < selectLength){
 navItem = navSelection[y];
 navItem.style.color = '#262626';
-navItem.style.background = 'linear-gradient(to right,  #BCDCDC, #EEF6F6)';
-
-
+navItem.style.background = 'linear-gradient(to left,  #BCDCDC, #CDE5E5)';
 
 if (resetCounter > 1){
 
 navItem.className += 'navSelection';
 
 }
-
 y++;
+
 }
-
-
 
 }
 
@@ -678,20 +605,23 @@ y=1;
 selectLength = navSelection.length;
 
 while(y < 4 && y < selectLength){
+
 navItem = navSelection[y];
 navItem.style.color = '#000000';
-navItem.style.background = '#EEF6F6';
+navItem.style.background = 'linear-gradient(to left,  #DDEEEE, #EEF6F6)';
 navItem.className = ' ';
 y++;
-}
 
 }
 
+}
 
 
-function starShift(){
 
-spa3Wid = getWidth(spa3);
+
+
+function starShift(spa3Wid){
+
 starsWid = getWidth(stars);
 system2Wid = getWidth(system2);
 totalWid = spa3Wid + starsWid + system2Wid;
@@ -709,10 +639,8 @@ stars.style.width = widFig + 'px';
 system2.style.right = widFig + 'px';
 
 }
-else{
 
-//stars.setStyle('width', '150px');
-//system2.setStyle('right', '150px');
+else{
 
 stars.style.width = '150px';
 system2.style.right = '150px';
@@ -721,13 +649,39 @@ system2.style.right = '150px';
 
 }
 
-function bottomLevels(marg){
+function bottomAdjust(){
+
+topObj.underL2 = [pan2, win2];
+setTop(topObj.underL2, underL2, 0);
+
+heiObj.earSlate = [pan2, win2, underL2];
+setHeight(heiObj.earSlate, earSlate, 1);
+
+heiObj.earth = [row1, earSlate];
+setHeight(heiObj.earth, earth, 1);
+
+topObj.ozone = [moon, earth];
+setTop(topObj.ozone, ozone, -1);
+
+heiObj.ozone = [endRow, endSlate];
+setHeight(heiObj.ozone, ozone, 0);
+
+heiObj.system2 = [moon, earth, ozone];
+setHeight(heiObj.system2, system2, 0);
+
+}
+
+
+function bottomLevelA(){
 
 win2Kids = [];
 win2Kids = win2.children;
 win2Num = win2Kids.length
 win2Sub = 0;
 d = 0;
+
+margg = win2Num * 2; // 2 Added for UnderL1/2
+margg += 10;
 
 while(d < win2Num){
 
@@ -738,40 +692,224 @@ d++;
 
 }
 
-win2Total = win2Sub + marg;
-win2.style.height = win2Total + 'px';
+win2Total = win2Sub + margg;
+
+return win2Total;
 
 }
 
-//trans func
+function bottomLevelB(){
 
-function listOver(){
+win2Totall = bottomLevelA();
+system2Hei = getHeight(system2);
+sunHei = getHeight(sun);
+systemHeight = system2Hei + sunHei;
+bodHei = bodHeightGet();
+heightDiff = 0;
 
-this.style.background = '#E6E6E6';
-this.style.color = '#458787';
+if (systemHeight < bodHei){
 
+heightDiff = bodHei - systemHeight;
+win2Totall += heightDiff;
+win2.style.height = win2Totall + 'px';
+
+bottomAdjust();
 
 }
 
-function listOut(){
+}
+
+function sp3WinF(spa3Width){
+
+starsWidth = getWidth(stars);
+widTot = spa3Width + starsWidth - 6;
+
+sp3Win.style.width = widTot + 'px';
+
+
+var sp3Grp = document.getElementsByClassName("textBorderB");
+var sp3Grp2 = document.getElementsByClassName("textboxC");
+
+
+widTot -= 9;
+widTot2 = widTot - 4;
+
+for (d = 0; d < sp3Grp.length; d++){
+
+sp3Holder = sp3Grp[d];
+sp3Holder2 = sp3Grp2[d];
+sp3Holder.style.width = widTot + 'px';
+sp3Holder2.style.width = widTot2 + 'px';
+
+}
+
+}
 
 
 
-navCheck = this.className;
+function heightReset(){
 
-if (navCheck == 'navSelection'){
+win2Hei = bottomLevelA(); 
+win2.style.height = win2Hei + 'px';
 
-this.style.background = 'linear-gradient(to right,  #ABD4D4, #EEF6F6)';
-this.style.color = '#1A1A1A';
+bottomAdjust();
+bottomLevelB();
 
+heiObj.system = [sun, system2];
+setHeight(heiObj.system, system, 0);
+
+heiObj.starBar = [navSlate];
+setHeight(heiObj.starBar, starBar, -4);
+
+heiObj.star = [system2];
+setHeight(heiObj.star, stars, 0);
+
+
+firstNavItem = firstNavItemF();
+heiObj.navSlate = [firstNavItem];
+setHeight(heiObj.navSlate, navSlate, 6);
+setHeight(heiObj.navSlate, pan2, 5);
+setTop(heiObj.navSlate, win2, 6);
+
+}
+
+
+
+function microWidth(){
+
+var textSetA = document.getElementsByClassName("textBorderA");
+var textSetB = document.getElementsByClassName("textboxB");
+var apicSet = document.getElementsByClassName("apic");
+
+if (nav1Width < microBar){
+
+pillar6.style.width = '100%';
+poster.style.left = '4px';
+poster.style.right = '3px';
+
+for (e = 0; e < apicSet.length; e++){
+
+picAdj = apicSet[e];
+picAdj.style.width = '100%';
+
+}
 
 }
 
 else {
 
-this.style.background = 'linear-gradient(to right,  #DDEEEE, #EEF6F6)';
-this.style.color = '#000000';
+pillar6.style.width = '50%';
+poster.style.left = '80px';
+poster.style.right = '80px';
 
+for (e = 0; e < apicSet.length; e++){
+
+picAdj = apicSet[e];
+picAdj.style.width = '50%';
+
+}
+
+}
+
+winSpace = getWidth(win2);
+winSpace -= 7;
+winSpace2 = winSpace - 4;
+winSet = setup(win2);
+
+for(d = 0; d < textSetA.length; d++){
+
+borderSelect = textSetA[d];
+divWidth = getWidth(borderSelect);
+
+borderSelect2 = textSetB[d]
+
+if (winSpace < divWidth || winSpace > divWidth){
+
+borderSelect.style.width = winSpace + 'px';
+borderSelect2.style.width = winSpace2 + 'px';
+
+
+}
+
+}
+
+}
+
+function microHide(){
+
+hideFlag = 1;
+
+hideSet = setup(win2);
+
+for(d = 3; d < hideSet.length; d++){
+
+hideSelect = hideSet[d];
+hideSelect.style.display = 'none';
+
+}
+
+}
+
+function microShow(){
+
+hideSet = setup(win2);
+showSet = setup(directShort);
+
+for(d = 2; d < hideSet.length; d++){
+
+var e;
+e = d - 2;
+
+showSelect = showSet[e];
+hideSelect = hideSet[d]
+
+if (this != showSelect){
+
+hideSelect.style.display = 'none';
+
+}
+
+else {
+
+hideSelect.style.display = 'initial';
+
+}
+
+}
+
+heightReset();
+
+}
+
+
+
+
+
+
+//trans func
+
+function listOver(){
+
+this.style.background = 'linear-gradient(to right,  #E6E6E6, #CDE5E5)';
+this.style.color = '#458787';
+
+}
+
+function listOut(){
+
+navCheck = this.className;
+
+if (navCheck == 'navSelection'){
+
+this.style.background = 'linear-gradient(to left,  #BCDCDC, #CDE5E5)';
+this.style.color = '#1A1A1A';
+
+}
+
+else {
+
+this.style.background = 'linear-gradient(to left,  #DDEEEE, #EEF6F6)';
+this.style.color = '#000000';
 
 }
 
@@ -779,7 +917,7 @@ this.style.color = '#000000';
 
 function listHoverTrans (setList){
 
-hoverList = [input, output, oldkent, dataset, directory, notes];
+hoverList = [input, output, admin, dataset, directory, notes];
 
 q = 6;
 v = 0;
@@ -800,24 +938,6 @@ q++;
 
 hovNum = hoverList.length;
 
-/*
-
-while (0 < hovNum){
-
-navPageLister = hoverList[0];
-navPageSelected = navPageLister.hasClass('selectPage');
-
-if (navPageSelected = 1){
-
-navPageLister.setStyle('background', '#458787');
-navPageLister.setStyle('color', '#E6E6E6');
-
-}
-
-}
-
-*/
-
 return hoverList;
 
 }
@@ -829,22 +949,9 @@ spa1.style.width = '150px';
 
 }
 
-
 function indexIn(){
 
-
 spa1.style.width = '25px';
-
-/*
-this.transition({
-
-easing: 'ease-in-out',
-delay: 0.3,
-duration: 0.5,
-width: '25px',
-
-});
-*/
 
 }
 
@@ -859,7 +966,6 @@ widTrans = widSpa3 + widStars;
 if (widSpa3 == rigSpa2){
 
 widTranss = widTrans + 'px';
-
 spa3.style.width = widTranss;
 
 }
@@ -867,7 +973,6 @@ spa3.style.width = widTranss;
 else {
 
 rigSpaa = rigSpa2 + 'px';
-
 spa3.style.width = rigSpaa;
 
 }
@@ -876,14 +981,14 @@ spa3.style.width = rigSpaa;
 
 function inButtonOn(){
 
-inButton1.style.background = '#3D7676';
 inButton1.style.border = '1px solid #ACACAC';
+inButton1.style.background = '#E6E6E6';
 
 }
 
 function inButtonOff(){
 
-inButton1.style.background = '#DDEEEE';
+inButton1.style.background = 'none';
 inButton1.style.border = 'none';
 
 }
@@ -901,11 +1006,10 @@ t = 1;
 for (t = 1; t < dropNum; t++){
 
 dropItem = dropSet[t];
-//dropItem.show(true);
-dropItem.style.display = 'initial';
+dropItem.style.display = 'inline';
 
 dropItem.style.color = '#1A1A1A';
-dropItem.style.background = '#DDEEEE';
+dropItem.style.background = 'linear-gradient(to left,  #DDEEEE, #EEF6F6)';
 
 
 dropItem.style.borderRight = '1px solid #ACACAC';
@@ -919,8 +1023,6 @@ dropBottom.style.borderBottom = '1px solid #ACACAC';
 
 }
 
-
-
 function dropDisplay(){
 
 if (this == dropB3){
@@ -931,21 +1033,19 @@ dropSelect(panSlate2);
 
 else if (this == dropB2){
 
+navSlate1.style.zIndex = 2;
 dropSelect(navSlate1);
-dataset.style.display = 'none';
 
 }
 
 else if (this == dropB1){
 
+panSlate1.style.zIndex = 2;
 dropSelect(panSlate1);
-firstNavItem.style.display = 'none';
 
 }
 
 }
-
-
 
 function dropOff1(offDrop){
 
@@ -960,13 +1060,10 @@ while (offNum > 1){
 offNum--;
 offItem = offSet[offNum];
 
-//offEnd = offItem.hide(true);
 offItem.style.display = 'none';
 }
 
 }
-
-
 
 function dropHide(){
 
@@ -978,15 +1075,16 @@ dropOff1(panSlate2);
 
 else if (this == pan1){
 
+
 dropOff1(navSlate1);
-dataset.style.display = 'initial';
+navSlate1.style.zIndex = 1;
 
 }
 
 else if (this == navbar){
 
 dropOff1(panSlate1);
-firstNavItem.style.display = 'initial';
+panSlate1.style.zIndex = 1;
 
 }
 
@@ -994,17 +1092,30 @@ firstNavItem.style.display = 'initial';
 
 function dropInOn(){
 
-this.style.background = '#458787';
+this.style.background = '#E6E6E6';
 this.style.border = '1px solid #ACACAC';
 
 }
 
 function dropInOff(){
 
-this.style.background = '#DDEEEE';
+this.style.background = 'none';
 this.style.border = 'none';
 
 }
+
+function microShowSet() {
+
+var sDirectSet = directShort.children;
+
+for (w = 0; w < sDirectSet.length; w++){
+
+sDirectSet[w].addEventListener("click", microShow);
+
+}
+
+}
+
 
 //framework calc
 
@@ -1017,6 +1128,7 @@ widPan2 = extSetupA(panSlate2);
 sla1Width = widNavGet(navSlate1);
 transFlag = 0;
 dropFlag = 0;
+hideFlag = 0;
 
 function spacer(){
 
@@ -1025,30 +1137,24 @@ bodProp2 = bodPropGet();
 widProp = [];
 widPropa = [];
 widProp = divider(bodProp2, span, 1);
-widProp[3] = widProp[1] - 1;
+widProp[3] = widProp[1] - 1; // DELETE
 
 if (widProp[0] > 140){
 
 widPropa[0] = widProp[0] + 'px';
 widPropa[2] = widProp[2] + 'px';
 
-//widAdj = widProp[0];
-
-//spa2.setStyle('left', widAdj + 'px');
-//spa2.setStyle('right', widProp[2] + 'px');
-//spa3.setStyle('width', widProp[2] + 'px');
-
 spa1.style.width = widPropa[0];
 spa2.style.left = widPropa[0];
 spa2.style.right= widPropa[2];
 spa3.style.width= widPropa[2];
 
-
-
-
-//spa1.detach('hover', indexOut, indexIn);
 spa1.removeEventListener("mouseover", indexOut);
 spa1.removeEventListener("mouseout", indexIn);
+
+starShift(widProp[2]);
+sp3WinF(widProp[2]);
+
 }
 
 else {
@@ -1062,16 +1168,16 @@ spa2.style.left = '29px';
 spa2.style.right = widProp2[1] + 'px'; // change from 'widProp[2]'
 spa3.style.width = widProp2[1] + 'px';
 
-//spa1x.on('hover', indexOut, indexIn);
 spa1.addEventListener("mouseover", indexOut);
 spa1.addEventListener("mouseout", indexIn);
+
+starShift(widProp2[1]);
+sp3WinF(widProp2[1]);
+
 }
 
-
-
-starShift();
-
 //sun calc
+
 
 heiObj.sun = [loginbox, logo];
 setHeight(heiObj.sun, sun, 5);
@@ -1092,12 +1198,14 @@ nav1Width = getWidth(navSlate1);
 microHalf = nav1Width / 2;
 microHalf = parseInt(microHalf);
 
-
 microBar = sla1Width/2 + 110;
 
 if(nav1Width < microBar || dropFlag == 1){
 
 twoDeckRewind();
+
+navSelectReset();
+
 
 dropB1.className = 'dropButton';
 dropB2.className = 'dropButton';
@@ -1107,23 +1215,25 @@ dropInB1.className = 'dropIn';
 dropInB2.className = 'dropIn';
 dropInB3.className = 'dropIn';
 
+firstNavItem = firstNavItemF();
 heiUpdate = getHeight(firstNavItem);
 widSpace2 = getWidth(pan1);
 widSpace2 -= heiUpdate;
 widSpace2 -= 1;
 
+
+
 navDropList(navSlate1, pan1);
 navDropList(panSlate1, pan1);
 navDropList(panSlate2, pan1);
+
+navSelectReset();
 
 heiObj.firstItem = [firstNavItem];
 setHeight(heiObj.firstItem, pan1, 5);
 
 if(nav1Width < microBar || dropFlag == 0){
 
-//dropInB1.on('hover', dropInOn, dropInOff);
-//dropInB2.on('hover', dropInOn, dropInOff);
-//dropInB3.on('hover', dropInOn, dropInOff);
 dropInB1.addEventListener("mouseover", dropInOn);
 dropInB2.addEventListener("mouseover", dropInOn);
 dropInB3.addEventListener("mouseover", dropInOn);
@@ -1132,16 +1242,10 @@ dropInB1.addEventListener("mouseleave", dropInOff);
 dropInB2.addEventListener("mouseleave", dropInOff);
 dropInB3.addEventListener("mouseleave", dropInOff);
 
-//dropB3.on('click', dropDisplay);
-//dropB2.on('click', dropDisplay);
-//dropB1.on('click', dropDisplay);
 dropB1.addEventListener("click", dropDisplay);
 dropB2.addEventListener("click", dropDisplay);
 dropB3.addEventListener("click", dropDisplay);
 
-//pan2.on('mouseleave', dropHide);
-//pan1.on('mouseleave', dropHide);
-//navbar.on('mouseleave', dropHide);
 pan2.addEventListener("mouseleave", dropHide);
 pan1.addEventListener("mouseleave", dropHide);
 navbar.addEventListener("mouseleave", dropHide);
@@ -1155,6 +1259,14 @@ borderSelectT.style.borderLeft ='1px solid #ACACAC';
 navDelector();
 
 dropFlag = 1;
+
+microWidth();
+
+if (hideFlag == 0){
+
+microHide();
+
+}
 
 }
 
@@ -1177,10 +1289,12 @@ navSelector();
 
 //general calc
 
-bottomLevels(14); //ADD 2 for UnderL1/2
-
 heiObj.sp3Bar = [loginbox];
 setHeight(heiObj.sp3Bar, sp3Bar, -3);
+setTop(heiObj.sp3Bar, sp3Win, -2);
+
+
+
 
 topObj.stars = [sun];
 setTop(topObj.stars, stars, 0);
@@ -1190,6 +1304,9 @@ setTop(topObj.row1, row1, 0);
 
 topObj.win1 = [pan1];
 setTop(topObj.win1, win1, 1);
+
+topObj.win2 = [poster];
+setHeight(topObj.win2, win1, 12);
 
 topObj.panSlate = [navSlate, row1];
 setTop(topObj.panSlate, panSlate, 0);
@@ -1206,74 +1323,30 @@ setHeight(heiObj.moon, moon, 0);
 topObj.earth = [moon];
 setTop(topObj.earth, earth, 0);
 
-topObj.underL2 = [pan2, win2];
-setTop(topObj.underL2, underL2, 0);
-
-heiObj.earSlate = [pan2, win2, underL2];
-setHeight(heiObj.earSlate, earSlate, 1);
-
-heiObj.earth = [row1, earSlate];
-setHeight(heiObj.earth, earth, 1);
-
-topObj.ozone = [moon, earth];
-setTop(topObj.ozone, ozone, -1);
-
-heiObj.ozone = [endRow, endSlate];
-setHeight(heiObj.ozone, ozone, 0);
-
-heiObj.system2 = [moon, earth, ozone];
-setHeight(heiObj.system2, system2, 0);
-
-heiObj.system = [sun, system2];
-setHeight(heiObj.system, system, 0);
-
-heiObj.starBar = [navSlate];
-setHeight(heiObj.starBar, starBar, -4);
-
-heiObj.star = [system2];
-setHeight(heiObj.star, stars, 0);
-
-heiObj.navSlate = [firstNavItem];
-setHeight(heiObj.navSlate, navSlate, 6);
-setHeight(heiObj.navSlate, pan2, 5);
-setTop(heiObj.navSlate, win2, 6);
-
+heightReset();
 
 
 }
 
 spacer();
 
-gui.on("windowresize", spacer);
+window.addEventListener("resize", spacer);
 
-
-
-
-setList = [index, navSlate1, navSlate2];
+setList = [index, navSlate1, navSlate2, directShort];
 hoverList = listHoverTrans (setList);
 a = 0;
 
 for(a = 0; a < hoverList.length; a++){
+
 hoverTarget = hoverList[a];
-//hoverTarget.on('hover', listOver, listOut);
 hoverTarget.addEventListener("mouseover", listOver);
 hoverTarget.addEventListener("mouseout", listOut);
-}
-/*
-widSpa1 = getWidth(spa1);
-if (widSpa1 < 50){
-spa1.on('hover', indexOut, indexIn);
-}
-*/
 
-//button1.on('hover', inButtonOn, inButtonOff);
-//button1.on('click', spa3Trans);
+}
+
 button1.addEventListener("mouseover", inButtonOn);
 button1.addEventListener("mouseout", inButtonOff);
 button1.addEventListener("click", spa3Trans);
 
-
-
-});
-
+microShowSet();
 

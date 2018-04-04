@@ -1,65 +1,99 @@
-
 h1{
 margin: 5px 2px 0px 3px;
-padding: 3px 7px 3px 7px;
+padding: 3px 5px 3px 5px;
 font-size: 18px;
 font-color: #333333;
-background: #EEF6F6;
 border: 1px solid #ACACAC;
 font-weight: normal;
 font-variant: small-caps;
-background: linear-gradient(to right,  #DDEEEE, #EEF6F6);
-}
-.textboxA{
-float: left;
 background: #FFFFFF;
-margin: 2px 2px 0px 3px;
-padding-bottom: 1px;
-border: 1px solid #ACACAC;
-font-family: "Century Gothic", Verdana, "Trebuchet MS";
-font-size: 14px;
 }
 
 .textboxB{
 float: left;
 background: #FFFFFF;
 margin: 1px;
+padding-bottom: 5px;
 border: 1px solid #ACACAC;
 font-family: "Century Gothic", Verdana, "Trebuchet MS";
 font-size: 14px;
 }
 
-/*
-.textboxA{
-position: absolute;
+.textboxC{
+float: left;
 background: #FFFFFF;
-top: 1px;
-right: 1px;
-left: 1px;
-bottom: 1px;
+margin: 1px;
+padding-bottom: 5px;
 border: 1px solid #ACACAC;
 font-family: "Century Gothic", Verdana, "Trebuchet MS";
 font-size: 14px;
 }
-*/
+
+
+.textBorderA{
+float: left;
+background: #FFFFFF;
+margin: 2px 2px 0px 3px;
+border: 1px solid #ACACAC;
+font-family: "Century Gothic", Verdana, "Trebuchet MS";
+font-size: 14px;
+overflow: visible;
+}
+
+.textBorderB{
+float: left;
+background: linear-gradient(to left, #3D7676, #E6E6E6);
+margin: 2px 2px 0px 3px;
+border: 1px solid #ACACAC;
+font-family: "Century Gothic", Verdana, "Trebuchet MS";
+font-size: 14px;
+overflow: visible;
+}
+
+.directBox{
+background: #FFFFFF;
+border: 1px solid #ACACAC;
+margin: 2px 2px 0px 3px;
+font-family: "Century Gothic", Verdana, "Trebuchet MS";
+}
+
+.directBox ul{
+border-top: 1px solid #ACACAC;
+border-left: 1px solid #ACACAC;
+border-right: 1px solid #ACACAC;
+margin: 1px;
+padding-left: 0px;
+background: linear-gradient(to left,  #DDEEEE, #EEF6F6);
+}
+
+
+
+.directBox li{
+overflow: hidden;
+border-bottom: 1px dotted #ACACAC;
+padding-left: 5px;
+}
+
+#directLast{
+border-bottom: 1px solid #ACACAC;
+}
 
 .headA{
 float: left;
-background: linear-gradient(to right,  #BCDCDC, #EEF6F6);
+background: linear-gradient(to left,  #CDE5E5, #EEF6F6);
 margin: 0px;
 width: 100%;
-
 padding: 0px;
 border-bottom: 1px dotted #ACACAC;
 }
 
 .textA{
 float: left;
-margin: 3px 12px 3px 12px;
+margin: 8px 8px 0px 10px;
 }
 
 h2{
-margin: 2px 10px 2px 10px;
+margin: 2px 7px 2px 7px;
 font-size: 17px;
 font-color: #333333;
 font-family: "Century Gothic", Verdana, "Trebuchet MS";
@@ -67,41 +101,62 @@ font-weight: normal;
 font-variant: small-caps;
 }
 
-.intextBorderA{
-float: left;
-margin: 1px 2px 1px 2px;
-background: #3D7676;
-padding: 0px;
-border: 1px solid #ACACAC;
-font-family: "Century Gothic", Verdana, "Trebuchet MS";
-font-size: 14px;
-z-index: 2;
-}
-
-/*
-.textBorder{
-position: absolute;
-background: #FFFFFF;
-top: 60px;
-right: -10px;
-left: 40px;
-background: #3D7676;
-height: 80px;
-border: 1px solid #ACACAC;
-font-family: "Century Gothic", Verdana, "Trebuchet MS";
-font-size: 14px;
-}
-*/
-
-
-
-
 h3{
+float: left;
 margin: 0px;
-margin-left: 10px;
-font-size: 16px;
+padding-top: 0.5em;
+padding-left: 8px;
+font-size: 17px;
 font-color: #333333;
+font-family: "Century Gothic", Verdana, "Trebuchet MS";
 font-weight: normal;
 font-variant: small-caps;
+
 }
+
+.pillarList{
+float: left;
+width: 50%;
+}
+
+.pillarList ul{
+margin: 0px;
+padding-left: 40px;
+font-size: 15px;
+font-variant: small-caps;
+}
+
+.questionList{
+float: left;
+width: 100%;
+margin-top: 3px;
+}
+
+.questionList ol{
+margin: 0px;
+padding-left: 40px;
+font-size: 15px;
+}
+
+#win2 ol{
+padding-left: 30px;
+padding-right: 10px;
+}
+
+#win2 ol ol{
+padding-left: 15px;
+}
+
+.sp3Head1{
+background: linear-gradient(to left,  #CDE5E5, #EEF6F6);
+border: 2px solid #3D7676;
+}
+
+
+
+
+
+
+
+
 
