@@ -25,7 +25,7 @@ var comms = document.getElementById('comms');
 var vault = document.getElementById('vault');
 var admin = document.getElementById('admin');
 
-var oksociety = document.getElementById('oksociety');
+var oldkent = document.getElementById('oldkent');
 var mayfair = document.getElementById('mayfair');
 var timemap = document.getElementById('timemap');
 var teamsheet = document.getElementById('teamsheet');
@@ -105,7 +105,7 @@ var pillar6 = document.getElementById('pillar6');
 
 
 
-navSelection = [ind1, output, mayfair, directory];
+// navSelection = [ind1, output, mayfair, directory];
 firstNavItemF = function () {return navSlate1.firstElementChild};
 lastNavItemF = function () {return navSlate1.lastElementChild};
 
@@ -731,7 +731,7 @@ var sp3Grp = document.getElementsByClassName("textBorderB");
 var sp3Grp2 = document.getElementsByClassName("textboxC");
 
 
-widTot -= 9;
+widTot -= 8;
 widTot2 = widTot - 4;
 
 for (d = 0; d < sp3Grp.length; d++){
@@ -781,9 +781,26 @@ var textSetA = document.getElementsByClassName("textBorderA");
 var textSetB = document.getElementsByClassName("textboxB");
 var apicSet = document.getElementsByClassName("apic");
 
+
+if (pillar6 != undefined){
+
 if (nav1Width < microBar){
 
 pillar6.style.width = '100%';
+
+}
+
+else {
+
+pillar6.style.width = '50%';
+
+}
+
+}
+
+
+if (nav1Width < microBar){
+
 poster.style.left = '4px';
 poster.style.right = '3px';
 
@@ -798,7 +815,6 @@ picAdj.style.width = '100%';
 
 else {
 
-pillar6.style.width = '50%';
 poster.style.left = '80px';
 poster.style.right = '80px';
 
@@ -811,9 +827,10 @@ picAdj.style.width = '50%';
 
 }
 
+
 winSpace = getWidth(win2);
 winSpace -= 7;
-winSpace2 = winSpace - 4;
+winSpace2 = winSpace - 8;
 winSet = setup(win2);
 
 for(d = 0; d < textSetA.length; d++){
@@ -852,6 +869,8 @@ hideSelect.style.display = 'none';
 
 function microShow(){
 
+if (directShort != undefined){
+
 hideSet = setup(win2);
 showSet = setup(directShort);
 
@@ -878,6 +897,8 @@ hideSelect.style.display = 'initial';
 }
 
 heightReset();
+
+}
 
 }
 
@@ -1106,11 +1127,15 @@ this.style.border = 'none';
 
 function microShowSet() {
 
+if (directShort != undefined){
+
 var sDirectSet = directShort.children;
 
 for (w = 0; w < sDirectSet.length; w++){
 
 sDirectSet[w].addEventListener("click", microShow);
+
+}
 
 }
 
@@ -1332,8 +1357,9 @@ spacer();
 
 window.addEventListener("resize", spacer);
 
-setList = [index, navSlate1, navSlate2, directShort];
-hoverList = listHoverTrans (setList);
+setList = [index, navSlate1, navSlate2];
+setList2 = setList.concat(shortList);
+hoverList = listHoverTrans (setList2);
 a = 0;
 
 for(a = 0; a < hoverList.length; a++){

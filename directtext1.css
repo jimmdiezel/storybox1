@@ -1,0 +1,79 @@
+.directBox{
+background: #FFFFFF;
+border: 1px solid #ACACAC;
+margin: 2px 2px 0px 3px;
+font-family: "Century Gothic", Verdana, "Trebuchet MS";
+}
+
+.directBox ul{
+border-top: 1px solid #ACACAC;
+border-left: 1px solid #ACACAC;
+border-right: 1px solid #ACACAC;
+margin: 2px;
+padding-left: 0px;
+background: linear-gradient(to left,  #DDEEEE, #EEF6F6);
+}
+
+.directBox li{
+overflow: hidden;
+border-bottom: 1px dotted #ACACAC;
+padding-left: 10px;
+padding-right: 12px;
+}
+
+#directLast{
+border-bottom: 1px solid #ACACAC;
+}
+
+
+
+
+.directPage{
+background: #FFFFFF;
+border: 1px solid #ACACAC;
+margin: 2px 2px 0px 3px;
+font-family: "Century Gothic", Verdana, "Trebuchet MS";
+padding-bottom: 2px;
+}
+
+.directPage ul{
+border-top: 1px solid #ACACAC;
+border-left: 1px solid #ACACAC;
+border-right: 1px solid #ACACAC;
+margin-top: 2px;
+margin-left: 2px;
+margin-right: 2px;
+margin-bottom: 0px;
+padding-left: 0px;
+background: linear-gradient(to left,  #DDEEEE, #EEF6F6);
+}
+
+.directPage li{
+overflow: hidden;
+}
+
+.directSolidB{
+border-bottom: 1px solid #ACACAC;
+}
+
+.directDottedB{
+border-bottom: 1px dotted #ACACAC;
+}
+
+.directMajor{
+padding-left: 10px;
+padding-right: 12px;
+}
+
+.directMinor{
+list-style-type: circle;
+padding-left: 32px;
+padding-right: 12px;
+}
+
+
+
+
+
+
+

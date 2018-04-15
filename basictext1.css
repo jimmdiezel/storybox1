@@ -12,7 +12,7 @@ background: #FFFFFF;
 .textboxB{
 float: left;
 background: #FFFFFF;
-margin: 1px;
+margin: 2px;
 padding-bottom: 5px;
 border: 1px solid #ACACAC;
 font-family: "Century Gothic", Verdana, "Trebuchet MS";
@@ -42,41 +42,17 @@ overflow: visible;
 
 .textBorderB{
 float: left;
-background: linear-gradient(to left, #3D7676, #E6E6E6);
-margin: 2px 2px 0px 3px;
+background: linear-gradient(to right, #3D7676, #E6E6E6);
+margin: 3px 2px 0px 3px;
 border: 1px solid #ACACAC;
 font-family: "Century Gothic", Verdana, "Trebuchet MS";
 font-size: 14px;
 overflow: visible;
 }
 
-.directBox{
-background: #FFFFFF;
-border: 1px solid #ACACAC;
-margin: 2px 2px 0px 3px;
-font-family: "Century Gothic", Verdana, "Trebuchet MS";
-}
-
-.directBox ul{
-border-top: 1px solid #ACACAC;
-border-left: 1px solid #ACACAC;
-border-right: 1px solid #ACACAC;
-margin: 1px;
-padding-left: 0px;
-background: linear-gradient(to left,  #DDEEEE, #EEF6F6);
-}
 
 
 
-.directBox li{
-overflow: hidden;
-border-bottom: 1px dotted #ACACAC;
-padding-left: 5px;
-}
-
-#directLast{
-border-bottom: 1px solid #ACACAC;
-}
 
 .headA{
 float: left;
@@ -90,6 +66,10 @@ border-bottom: 1px dotted #ACACAC;
 .textA{
 float: left;
 margin: 8px 8px 0px 10px;
+}
+
+.textAP2{
+margin-top: 8px;
 }
 
 h2{
@@ -125,6 +105,20 @@ padding-left: 40px;
 font-size: 15px;
 font-variant: small-caps;
 }
+
+.teamList{
+float: left;
+width: 100%;
+margin-top: 8px;
+}
+
+.teamList ul{
+margin: 0px;
+padding-left: 40px;
+font-size: 15px;
+font-variant: small-caps;
+}
+
 
 .questionList{
 float: left;

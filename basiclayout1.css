@@ -1,6 +1,6 @@
 body{
 margin:0px;
-background-image: url("BackgroundJPG2.png");
+background-image: url("BackgroundJPG4.png");
 background-attachment: fixed;
 font-family: "Century Gothic", Verdana, "Trebuchet MS";
 transition: all 0.5s;
@@ -71,10 +71,10 @@ bottom: 0px;
 right: 0px;
 width: 220px;
 background: ;
-background: linear-gradient(to bottom, #3D7676, #E6E6E6);
+background: linear-gradient(to left, #CDE5E5, #E6E6E6);
 border-left: 1px solid #ACACAC;
-transition: all 0.7s;
-transition-delay: 0.7s;
+transition: all 0.2s;
+transition-delay: 0.2s;
 transition-timing-function: ease-in-out;
 }
 
@@ -248,7 +248,7 @@ top: 32px;
 right: 0px;
 left: 0px;
 border-left: 1px solid #ACACAC;
-background: #3D7676;
+background: linear-gradient(to right, #3D7676, #E6E6E6);
 }
 
 #navSlate{
@@ -265,7 +265,7 @@ right: 0px;
 border-left: 1px solid #ACACAC;
 border-right: 1px solid #ACACAC;
 border-top: 1px solid #ACACAC;
-background: #3D7676;
+background: #E6E6E6;
 }
 
 #navbar2{
@@ -275,7 +275,7 @@ bottom: 0px;
 right: 1px;
 left: -1px;
 border-bottom: 1px solid #ACACAC;
-background: #3D7676;
+background: #E6E6E6;
 overflow: visible;
 }
 
@@ -303,6 +303,7 @@ padding-right: 2px;
 color: #1A1A1A;
 background: linear-gradient(to left,  #DDEEEE, #EEF6F6);
 }
+
 
 ul.dropBar{
 position: absolute;
@@ -374,7 +375,17 @@ border-bottom: 1px solid #ACACAC;
 padding-left: 2px;
 }*/
 
+#input{
+border-left: 1px solid #ACACAC;
+}
 
+#dataset{
+border-left: 1px solid #ACACAC;
+}
+
+#oldkent{
+border-left: 1px solid #ACACAC;
+}
 
 
 #output{
@@ -424,7 +435,7 @@ right: 0px;
 width: 1px;
 border-left: 1px solid #ACACAC;
 border-right: 1px solid #ACACAC;
-background: #3D7676;
+background: #E6E6E6;
 }
 
 
@@ -472,7 +483,7 @@ left: 1px;
 right: 0px;
 border-right: 1px solid #ACACAC;
 border-top: 1px solid #ACACAC;
-background: #3D7676;
+background: linear-gradient(to right, #3D7676, #E6E6E6);
 }
 
 .underline2{
@@ -482,7 +493,7 @@ bottom: 0px;
 right: 1px;
 left: -1px;
 border-bottom: 1px solid #ACACAC;
-background: #3D7676;
+background: linear-gradient(to right, #3D7676, #E6E6E6);
 }
 
 #earth{
@@ -525,7 +536,7 @@ top: 0px;
 top: 4px;
 height: 5em;
 border-top: 1px solid #ACACAC;
-background: linear-gradient(to bottom, #3D7676, #E6E6E6);
+background: linear-gradient(to right, #3D7676, #E6E6E6);
 }
 
 #endLeft{
@@ -535,7 +546,7 @@ bottom: -1px;
 width: 1px;
 right: 0px;
 border-right: 1px solid #ACACAC;
-background: linear-gradient(to bottom, #3D7676, #E6E6E6);
+background: #E6E6E6;
 }
 
 #endCanvas{
