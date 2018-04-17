@@ -1,1 +1,0 @@
-navSelection = [ind1, admin, oldkent, directory];

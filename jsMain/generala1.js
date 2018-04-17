@@ -99,6 +99,20 @@ var directLast = document.getElementById('directLast');
 var pillar6 = document.getElementById('pillar6');
 
 
+var security = document.getElementById('security');
+var safety = document.getElementById('safety');
+var equality = document.getElementById('equality');
+var ecology = document.getElementById('ecology');
+var merit = document.getElementById('merit');
+var mobility = document.getElementById('mobility');
+var autonomy = document.getElementById('autonomy');
+var community = document.getElementById('community');
+var dignity = document.getElementById('dignity');
+var wellbeing = document.getElementById('wellbeing');
+var integrity = document.getElementById('integrity');
+var solidarity = document.getElementById('solidarity');
+
+
 // KEEP INDEX FIRST IN NAVSELECTION
 
 

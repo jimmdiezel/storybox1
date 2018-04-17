@@ -1,6 +1,6 @@
 body{
 margin:0px;
-background-image: url("BackgroundJPG4.png");
+background-image: url("../images/BackgroundJPG4.png");
 background-attachment: fixed;
 font-family: "Century Gothic", Verdana, "Trebuchet MS";
 transition: all 0.5s;
