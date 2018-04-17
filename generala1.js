@@ -911,7 +911,7 @@ heightReset();
 
 function listOver(){
 
-this.style.background = 'linear-gradient(to right,  #E6E6E6, #CDE5E5)';
+this.style.background = 'linear-gradient(to right,  #E6E6E6, #D7E9E9)';
 this.style.color = '#458787';
 
 }
