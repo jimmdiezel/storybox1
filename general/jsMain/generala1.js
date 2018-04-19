@@ -844,7 +844,7 @@ picAdj.style.width = '50%';
 
 winSpace = getWidth(win2);
 winSpace -= 7;
-winSpace2 = winSpace - 8;
+winSpace2 = winSpace - 6;
 winSet = setup(win2);
 
 for(d = 0; d < textSetA.length; d++){
@@ -925,7 +925,8 @@ heightReset();
 
 function listOver(){
 
-this.style.background = 'linear-gradient(to right,  #E6E6E6, #D7E9E9)';
+this.style.background = 'linear-gradient(to left,  #D9D9D9, #F2F2F2)';
+//this.style.background = 'linear-gradient(to right,  #E6E6E6, #D7E9E9)';
 this.style.color = '#458787';
 
 }

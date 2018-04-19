@@ -387,6 +387,9 @@ border-left: 1px solid #ACACAC;
 border-left: 1px solid #ACACAC;
 }
 
+#reboot{
+border-left: 1px solid #ACACAC;
+}
 
 #output{
 border-right: 1px solid #ACACAC;
