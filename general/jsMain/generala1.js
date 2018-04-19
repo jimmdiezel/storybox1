@@ -23,7 +23,7 @@ var cycles = document.getElementById('cycles');
 var zones = document.getElementById('zones');
 var comms = document.getElementById('comms');
 var vault = document.getElementById('vault');
-var admin = document.getElementById('admin');
+var bureau = document.getElementById('bureau');
 
 var oldkent = document.getElementById('oldkent');
 var mayfair = document.getElementById('mayfair');
